@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+load("//mediapipe/framework/tool:cc_static_library.bzl", "cc_static_library")
+load("@build_bazel_rules_apple//apple:apple_static_library.bzl", "apple_static_library")
+
 package(default_visibility = ["//visibility:public"])
 
 package_group(
@@ -26,5 +29,21 @@ package_group(
     name = "users",
     includes = [
         ":internal",
+    ],
+)
+
+apple_static_library(
+    name = "ios_face_landmarker",
+    deps = [
+        "//mediapipe/tasks/c/vision/face_landmarker:face_landmarker"
+    ],
+    platform_type = "ios",
+    minimum_os_version = "12.0",
+)
+
+cc_static_library(
+    name = "android_face_landmarker",
+    deps = [
+        "//mediapipe/tasks/c/vision/face_landmarker:face_landmarker"
     ],
 )

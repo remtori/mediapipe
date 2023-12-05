@@ -560,8 +560,7 @@ class FaceLandmarkerGraph : public core::ModelTaskGraph {
   }
 };
 
-REGISTER_MEDIAPIPE_GRAPH(
-    ::mediapipe::tasks::vision::face_landmarker::FaceLandmarkerGraph);
+REGISTER_MEDIAPIPE_GRAPH(::mediapipe::tasks::vision::face_landmarker::FaceLandmarkerGraph);
 
 }  // namespace face_landmarker
 }  // namespace vision

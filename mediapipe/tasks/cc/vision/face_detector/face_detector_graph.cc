@@ -340,8 +340,7 @@ class FaceDetectorGraph : public core::ModelTaskGraph {
   }
 };
 
-REGISTER_MEDIAPIPE_GRAPH(
-    ::mediapipe::tasks::vision::face_detector::FaceDetectorGraph)
+REGISTER_MEDIAPIPE_GRAPH(::mediapipe::tasks::vision::face_detector::FaceDetectorGraph)
 
 }  // namespace face_detector
 }  // namespace vision

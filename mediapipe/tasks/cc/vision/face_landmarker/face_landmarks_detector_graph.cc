@@ -376,8 +376,7 @@ class SingleFaceLandmarksDetectorGraph : public core::ModelTaskGraph {
 };
 
 // clang-format off
-REGISTER_MEDIAPIPE_GRAPH(
-  ::mediapipe::tasks::vision::face_landmarker::SingleFaceLandmarksDetectorGraph); // NOLINT
+REGISTER_MEDIAPIPE_GRAPH(::mediapipe::tasks::vision::face_landmarker::SingleFaceLandmarksDetectorGraph);
 // clang-format on
 
 // A "mediapipe.tasks.vision.face_landmarker.MultiFaceLandmarksDetectorGraph"
@@ -661,9 +660,7 @@ class MultiFaceLandmarksDetectorGraph : public core::ModelTaskGraph {
 };
 
 // clang-format off
-REGISTER_MEDIAPIPE_GRAPH(
-  ::mediapipe::tasks::vision::face_landmarker::MultiFaceLandmarksDetectorGraph);
-  // NOLINT
+REGISTER_MEDIAPIPE_GRAPH(::mediapipe::tasks::vision::face_landmarker::MultiFaceLandmarksDetectorGraph);
 // clang-format on
 
 }  // namespace face_landmarker
