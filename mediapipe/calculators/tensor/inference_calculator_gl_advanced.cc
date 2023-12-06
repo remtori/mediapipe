@@ -423,5 +423,8 @@ absl::Status InferenceCalculatorGlAdvancedImpl::Close(CalculatorContext* cc) {
   return gpu_inference_runner_->Close();
 }
 
+const char* _mp_inference_calculator_register_gl_advanced = typeid(
+    mediapipe::api2::InferenceCalculatorGlAdvancedImpl).name();
+
 }  // namespace api2
 }  // namespace mediapipe

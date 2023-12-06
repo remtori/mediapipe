@@ -20,7 +20,7 @@
 #include "mediapipe/framework/formats/landmark.pb.h"
 #include "mediapipe/framework/formats/location_data.pb.h"
 #include "mediapipe/framework/port/ret_check.h"
-
+#define __MP_FILE lmtdc
 namespace mediapipe {
 
 namespace {

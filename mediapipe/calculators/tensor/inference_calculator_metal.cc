@@ -323,5 +323,7 @@ absl::Status InferenceCalculatorMetalImpl::CreateConverters(
   return absl::OkStatus();
 }
 
+const char* _mp_inference_calculator_register_metal = typeid(mediapipe::api2::InferenceCalculatorMetalImpl).name();
+
 }  // namespace api2
 }  // namespace mediapipe

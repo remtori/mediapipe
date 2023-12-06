@@ -284,5 +284,7 @@ absl::Status InferenceCalculatorGlImpl::Close(CalculatorContext* cc) {
   return absl::OkStatus();
 }
 
+const char* _mp_inference_calculator_register_gl = typeid(mediapipe::api2::InferenceCalculatorGlImpl).name();
+
 }  // namespace api2
 }  // namespace mediapipe

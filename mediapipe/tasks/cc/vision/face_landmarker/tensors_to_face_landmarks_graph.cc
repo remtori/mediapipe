@@ -252,8 +252,7 @@ class TensorsToFaceLandmarksGraph : public Subgraph {
 };
 
 // clang-format off
-REGISTER_MEDIAPIPE_GRAPH(
-  ::mediapipe::tasks::vision::face_landmarker::TensorsToFaceLandmarksGraph); // NOLINT
+REGISTER_MEDIAPIPE_GRAPH(::mediapipe::tasks::vision::face_landmarker::TensorsToFaceLandmarksGraph); // NOLINT
 // clang-format on
 
 }  // namespace face_landmarker

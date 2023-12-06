@@ -158,5 +158,7 @@ InferenceCalculatorCpuImpl::MaybeCreateDelegate(CalculatorContext* cc) {
   return nullptr;
 }
 
+const char* _mp_inference_calculator_register_cpu = typeid(InferenceCalculatorCpuImpl).name();
+
 }  // namespace api2
 }  // namespace mediapipe

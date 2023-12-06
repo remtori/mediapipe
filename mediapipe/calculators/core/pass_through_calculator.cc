@@ -14,7 +14,7 @@
 
 #include "mediapipe/framework/calculator_framework.h"
 #include "mediapipe/framework/port/canonical_errors.h"
-
+#define __MP_FILE ptc
 namespace mediapipe {
 
 // A Calculator that simply passes its input Packets and header through,

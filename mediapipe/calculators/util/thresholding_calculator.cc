@@ -14,7 +14,7 @@
 
 #include "mediapipe/calculators/util/thresholding_calculator.pb.h"
 #include "mediapipe/framework/calculator_framework.h"
-
+#define __MP_FILE thc
 namespace mediapipe {
 
 constexpr char kThresholdTag[] = "THRESHOLD";

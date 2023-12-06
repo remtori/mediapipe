@@ -22,7 +22,7 @@
 #include "mediapipe/framework/port/canonical_errors.h"
 #include "mediapipe/framework/port/ret_check.h"
 #include "mediapipe/util/resource_util.h"
-
+#define __MP_FILE splc
 namespace mediapipe {
 
 // Splits an input packet of ListType with a repeated field of ItemType

@@ -118,5 +118,7 @@ InferenceCalculatorXnnpackImpl::CreateDelegate(CalculatorContext* cc) {
                            &TfLiteXNNPackDelegateDelete);
 }
 
+const char* _mp_inference_calculator_register_xnnpack = typeid(mediapipe::api2::InferenceCalculatorXnnpackImpl).name();
+
 }  // namespace api2
 }  // namespace mediapipe

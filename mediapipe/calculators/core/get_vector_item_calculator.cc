@@ -18,7 +18,7 @@
 #include "mediapipe/framework/formats/detection.pb.h"
 #include "mediapipe/framework/formats/landmark.pb.h"
 #include "mediapipe/framework/formats/rect.pb.h"
-
+#define __MP_FILE gvic
 namespace mediapipe {
 namespace api2 {
 

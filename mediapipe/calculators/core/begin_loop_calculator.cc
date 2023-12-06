@@ -24,7 +24,7 @@
 #include "mediapipe/framework/formats/rect.pb.h"
 #include "mediapipe/framework/formats/tensor.h"
 #include "mediapipe/gpu/gpu_buffer.h"
-
+#define __MP_FILE blc
 namespace mediapipe {
 
 // A calculator to process std::vector<NormalizedLandmarkList>.

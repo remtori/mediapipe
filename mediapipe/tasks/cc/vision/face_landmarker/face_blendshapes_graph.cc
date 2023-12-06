@@ -317,8 +317,7 @@ class FaceBlendshapesGraph : public core::ModelTaskGraph {
   }
 };
 
-REGISTER_MEDIAPIPE_GRAPH(
-    ::mediapipe::tasks::vision::face_landmarker::FaceBlendshapesGraph);
+REGISTER_MEDIAPIPE_GRAPH(::mediapipe::tasks::vision::face_landmarker::FaceBlendshapesGraph);
 
 }  // namespace face_landmarker
 }  // namespace vision

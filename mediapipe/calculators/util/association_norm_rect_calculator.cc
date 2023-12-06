@@ -65,7 +65,7 @@ class AssociationNormRectCalculator
     return Rectangle_f(xmin, ymin, input.width(), input.height());
   }
 };
-
+#define __MP_FILE anrc
 REGISTER_CALCULATOR(AssociationNormRectCalculator);
 
 }  // namespace mediapipe

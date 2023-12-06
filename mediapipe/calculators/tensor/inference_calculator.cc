@@ -98,5 +98,7 @@ InferenceCalculator::GetOpResolverAsPacket(CalculatorContext* cc) {
           tflite::ops::builtin::BuiltinOpResolverWithoutDefaultDelegates>());
 }
 
+const char* _mp_inference_calculator_register_selector = typeid(InferenceCalculatorSelectorImpl).name();
+
 }  // namespace api2
 }  // namespace mediapipe

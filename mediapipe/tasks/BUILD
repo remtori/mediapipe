@@ -35,7 +35,8 @@ package_group(
 apple_static_library(
     name = "ios_face_landmarker",
     deps = [
-        "//mediapipe/tasks/c/vision/face_landmarker:face_landmarker"
+        "//mediapipe/tasks/c/vision/face_landmarker:face_landmarker",
+        "@ios_opencv//:OpencvFramework",
     ],
     platform_type = "ios",
     minimum_os_version = "12.0",
@@ -46,4 +47,15 @@ cc_static_library(
     deps = [
         "//mediapipe/tasks/c/vision/face_landmarker:face_landmarker"
     ],
+)
+
+cc_binary(
+    name = "face_landmarker",
+    deps = [
+        "//mediapipe/tasks/c/vision/face_landmarker:face_landmarker"
+    ],
+    defines = [
+
+    ],
+    linkshared = 1,
 )

@@ -17,7 +17,7 @@
 #include "mediapipe/framework/calculator_framework.h"
 #include "mediapipe/framework/calculator_options.pb.h"
 #include "mediapipe/framework/formats/rect.pb.h"
-
+#define __MP_FILE rtc
 namespace mediapipe {
 
 namespace {

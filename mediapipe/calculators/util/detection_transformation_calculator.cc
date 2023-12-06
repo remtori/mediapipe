@@ -323,7 +323,7 @@ class DetectionTransformationCalculator : public Node {
   bool output_relative_bounding_boxes_;
   bool output_pixel_bounding_boxes_;
 };
-
+#define __MP_FILE dtc
 MEDIAPIPE_REGISTER_NODE(DetectionTransformationCalculator);
 
 }  // namespace api2

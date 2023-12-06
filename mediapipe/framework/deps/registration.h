@@ -405,9 +405,9 @@ class GlobalFactoryRegistry {
 
 // Two levels of macros are required to convert __LINE__ into a string
 // containing the line number.
-#define REGISTRY_STATIC_VAR_INNER(var_name, line) var_name##_##line##__
-#define REGISTRY_STATIC_VAR(var_name, line) \
-  REGISTRY_STATIC_VAR_INNER(var_name, line)
+#define REGISTRY_STATIC_VAR_INNER(var_name, line, file) var_name##_##line##__##file
+#define REGISTRY_STATIC_VAR(var_name, line, file) \
+  REGISTRY_STATIC_VAR_INNER(var_name, line, file)
 
 // Disables all static registration in MediaPipe accomplished using:
 // - REGISTER_FACTORY_FUNCTION_QUALIFIED
@@ -511,12 +511,11 @@ static_assert(false,
 // When static registration is enabled and NOT running in Dry-Run mode, make
 // sure corresponding macros do proper static registration.
 
-#define MEDIAPIPE_REGISTER_FACTORY_FUNCTION_QUALIFIED(RegistryType, var_name, \
-                                                      name, ...)              \
-  static mediapipe::RegistrationToken* REGISTRY_STATIC_VAR(var_name,          \
-                                                           __LINE__) =        \
-      new mediapipe::RegistrationToken(                                       \
-          RegistryType::Register(name, __VA_ARGS__));
+#define MEDIAPIPE_REGISTER_FACTORY_FUNCTION_QUALIFIED(RegistryType, var_name,      \
+                                                      name, ...)                   \
+mediapipe::RegistrationToken *REGISTRY_STATIC_VAR(var_name, __LINE__, __MP_FILE) = \
+    new mediapipe::RegistrationToken(                                              \
+        RegistryType::Register(name, __VA_ARGS__));
 
 // Defines a utility registrator class which can be used to automatically
 // register factory functions.
